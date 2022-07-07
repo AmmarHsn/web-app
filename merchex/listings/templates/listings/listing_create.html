@@ -1,0 +1,13 @@
+{% extends 'listings/base.html' %}
+
+{% block content%}
+
+<h1>Creation of a listing</h1>
+
+<form action="" method="post" > <!-- adding argument novalidate in oder to check server check ! first -->
+    {% csrf_token %}            <!-- then remove it to use client site validation ! but sever site V should work! -->
+    {{ form.as_p }}
+    <input type="submit" value="Envoyer">
+</form>
+
+{% endblock%}
